@@ -1,0 +1,11 @@
+<div>
+    <div class="results">{{results?.length}}</div>
+        <span *ngFor="let result of results">
+            <img src="{{result.imgUrl}}" />
+            <p>{{result.name}}</p>
+        </span>
+    
+</div>
+<app-search-button [isSearching]="isSearching" 
+    (search)="search($event)">
+</app-search-button>
