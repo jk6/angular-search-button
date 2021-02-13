@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Person } from '../models/person';
 import { ResultsService } from '../results.service';
 
 @Component({
@@ -6,29 +8,24 @@ import { ResultsService } from '../results.service';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
-  isSearching: boolean;
-  results: any[] = [];
+export class SearchComponent {
+  isSearching = false;
+  results$: Observable<Person[]>;
 
   constructor(private resultsService: ResultsService) { }
 
-  ngOnInit() {
-    this.isSearching = false;
-  }
-
   getResults(): void {
-    this.resultsService.getResults()
-      .subscribe(results => this.results = results);
+    this.results$ = this.resultsService.getResults();
   }
 
-  search(event: any): void {
-    this.isSearching = event;
+  search(event: boolean): void {
+    if (event === true) {
+      this.isSearching = true;
+    }
 
     setTimeout(() => {
       this.getResults();
-      this.isSearching = false;    
+      this.isSearching = false;
     }, 2000);
-
-    console.log(this.results);
   }
 }

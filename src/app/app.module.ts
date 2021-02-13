@@ -24,6 +24,10 @@ import { SearchButtonComponent } from './search-button/search-button.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
+  exports: [
+    SearchComponent,
+    SearchButtonComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
