@@ -7,17 +7,13 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter, ChangeDetect
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchButtonComponent implements OnChanges {
-  @Output() search: EventEmitter<any> = new EventEmitter();
+  @Output() search: EventEmitter<boolean> = new EventEmitter();
   @Input() isSearching: boolean;
 
   buttonText: string;
 
-  constructor() { }
-
   ngOnInit () {
     this.buttonText = this.isSearching ? 'Searching...' : 'Search';
-    console.log(this.isSearching);
-    console.log('ngOnInit called');
   }
 
   ngOnChanges() {

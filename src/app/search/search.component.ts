@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { delay, tap } from 'rxjs/operators';
 import { Person } from '../models/person';
 import { ResultsService } from '../results.service';
 
@@ -15,17 +16,17 @@ export class SearchComponent {
   constructor(private resultsService: ResultsService) { }
 
   getResults(): void {
-    this.results$ = this.resultsService.getResults();
+    this.results$ = this.resultsService.getResults().pipe(
+      // simulate latency
+      delay(2000),
+      tap(() => {
+        this.isSearching = !this.isSearching;
+      })
+    );
   }
 
   search(event: boolean): void {
-    if (event === true) {
-      this.isSearching = true;
-    }
-
-    setTimeout(() => {
-      this.getResults();
-      this.isSearching = false;
-    }, 2000);
+    this.isSearching = event;
+    this.getResults();
   }
 }
