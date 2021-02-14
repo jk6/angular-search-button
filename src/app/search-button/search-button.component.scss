@@ -1,21 +1,21 @@
-button {
-    $buttonBackgroundColor: #1779ba;
-    $buttonTextColor: #fefefe;
-    $minButtonWidth: 97px;
+// button {
+//     $buttonBackgroundColor: #1779ba;
+//     $buttonTextColor: #fefefe;
+//     $minButtonWidth: 97px;
 
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 0 1rem 0;
-    font-family: inherit;
-    min-width: $minButtonWidth;
-    padding: .85em 1em;
-    border: 1px solid transparent;
-    border-radius: 0;
-    transition: background-color .25s ease-out,color .25s ease-out;
-    font-size: .9rem;
-    line-height: 1;
-    text-align: center;
-    cursor: pointer;
-    background-color: $buttonBackgroundColor;
-    color: $buttonTextColor;
-}
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin: 0 0 1rem 0;
+//     font-family: inherit;
+//     min-width: $minButtonWidth;
+//     padding: .85em 1em;
+//     border: 1px solid transparent;
+//     border-radius: 0;
+//     transition: background-color .25s ease-out,color .25s ease-out;
+//     font-size: .9rem;
+//     line-height: 1;
+//     text-align: center;
+//     cursor: pointer;
+//     background-color: $buttonBackgroundColor;
+//     color: $buttonTextColor;
+// }
