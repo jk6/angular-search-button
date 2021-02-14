@@ -7,8 +7,8 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter, ChangeDetect
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchButtonComponent implements OnChanges {
-  @Output() search: EventEmitter<boolean> = new EventEmitter();
   @Input() isSearching: boolean;
+  @Output() search: EventEmitter<boolean> = new EventEmitter();
 
   buttonText: string;
 
