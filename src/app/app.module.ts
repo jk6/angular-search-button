@@ -9,16 +9,20 @@ import { SearchComponent } from './search/search.component';
 import { SearchButtonComponent } from './search-button/search-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material';
+import { PersonCardComponent } from './person-card/person-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    SearchButtonComponent
+    SearchButtonComponent,
+    PersonCardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatCardModule,
     MatButtonModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
