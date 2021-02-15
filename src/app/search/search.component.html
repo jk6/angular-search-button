@@ -4,9 +4,7 @@
     <div class="results">{{_.results?.length}}</div>
       <div *ngFor="let result of _.results">
           <div style="padding-bottom: 15px;">
-            <app-person-card [name]="result.name"
-              [info]="result.info"
-              [url]="result.imgUrl"></app-person-card>
+            <app-person-card [person]="result"></app-person-card>
           </div>
       </div>
 </div>
