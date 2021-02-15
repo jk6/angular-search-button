@@ -20,7 +20,7 @@ export class SearchComponent {
       // simulate latency
       delay(2000),
       tap(() => {
-        this.isSearching = !this.isSearching;
+        this.isSearching = false;
       })
     );
   }
