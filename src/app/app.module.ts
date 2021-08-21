@@ -1,23 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { InMemoryDataService } from './in-memory-data.service';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { InMemoryDataService } from "./in-memory-data.service";
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 
-import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
-import { SearchButtonComponent } from './search-button/search-button.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material';
-import { PersonCardComponent } from './person-card/person-card.component';
+import { AppComponent } from "./app.component";
+import { SearchComponent } from "./search/search.component";
+import { SearchButtonComponent } from "./search-button/search-button.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material";
+import { PersonCardComponent } from "./person-card/person-card.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     SearchButtonComponent,
-    PersonCardComponent
+    PersonCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,16 +27,13 @@ import { PersonCardComponent } from './person-card/person-card.component';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
-    BrowserAnimationsModule
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
+    BrowserAnimationsModule,
   ],
-  exports: [
-    SearchComponent,
-    SearchButtonComponent
-  ],
+  exports: [SearchComponent, SearchButtonComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

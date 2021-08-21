@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SearchButtonComponent } from './search-button.component';
+import { SearchButtonComponent } from "./search-button.component";
 
-describe('SearchButtonComponent', () => {
+describe("SearchButtonComponent", () => {
   let component: SearchButtonComponent;
   let fixture: ComponentFixture<SearchButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchButtonComponent ]
-    })
-    .compileComponents();
+      declarations: [SearchButtonComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('SearchButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
