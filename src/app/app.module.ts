@@ -1,16 +1,15 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { InMemoryDataService } from "./in-memory-data.service";
 import { HttpClientModule } from "@angular/common/http";
-import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-
-import { AppComponent } from "./app.component";
-import { SearchComponent } from "./search/search.component";
-import { SearchButtonComponent } from "./search-button/search-button.component";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatButtonModule } from "@angular/material/button";
+import { NgModule } from "@angular/core";
 import { MatCardModule } from "@angular/material";
+import { MatButtonModule } from "@angular/material/button";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { AppComponent } from "./app.component";
+import { InMemoryDataService } from "./in-memory-data.service";
 import { PersonCardComponent } from "./person-card/person-card.component";
+import { SearchButtonComponent } from "./search-button/search-button.component";
+import { SearchComponent } from "./search/search.component";
 
 @NgModule({
   declarations: [
